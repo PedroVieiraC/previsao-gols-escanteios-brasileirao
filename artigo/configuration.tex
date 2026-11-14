@@ -1,0 +1,133 @@
+% ============================================================
+% PACOTES
+% ============================================================
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{nomencl}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{csquotes}
+
+% Pacotes adicionais
+\usepackage{lipsum}
+
+% Marcador em vermelho para referência ou número a completar antes da entrega
+\newcommand{\pendente}[1]{\textcolor{red}{[#1]}}
+
+% ============================================================
+% CITAÇÕES
+% ============================================================
+
+\usepackage[
+    brazilian,
+    hyperpageref
+]{backref}
+
+\usepackage[
+    alf,
+    abnt-emphasize=bf,
+    abnt-etal-cite=2,
+    abnt-etal-list=0,
+    abnt-etal-text=it,
+    abnt-and-type=e,
+    abnt-doi=expand,
+    abnt-url-package=url,
+    abnt-thesis-year=both
+]{abntex2cite}
+
+% ============================================================
+% FORMATAÇÃO DOS TÍTULOS
+% ============================================================
+
+\setsecheadstyle{\bfseries\MakeUppercase}
+
+% ============================================================
+% BACKREF
+% ============================================================
+
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+
+\renewcommand{\backref}{}
+
+\renewcommand*{\backrefalt}[4]{
+    \ifcase #1
+        Nenhuma citação no texto.
+    \or
+        Citado na página #2.
+    \else
+        Citado #1 vezes nas páginas #2.
+    \fi
+}
+
+% ============================================================
+% APARÊNCIA DO PDF
+% ============================================================
+
+\definecolor{blue}{RGB}{41,5,195}
+
+\makeatletter
+
+\hypersetup{
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfsubject={Modelo de artigo científico com abnTeX2 atualizado},
+    pdfcreator={LaTeX with abnTeX2},
+    pdfkeywords={
+        abnt
+    }{
+        latex
+    }{
+        abntex
+    }{
+        abntex2
+    }{
+        artigo científico
+    }{
+        NBR 6022
+    }{
+        NBR 10520
+    },
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    bookmarksdepth=4
+}
+
+\makeatother
+
+% ============================================================
+% ÍNDICE
+% ============================================================
+
+% \makeindex
+
+% ============================================================
+% MARGENS
+% ============================================================
+
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{2cm}{*}
+
+\checkandfixthelayout
+
+% ============================================================
+% ESPAÇAMENTOS
+% ============================================================
+
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.2cm}
+
+\SingleSpacing
+
+% Para espaçamento 1,5:
+% \OnehalfSpacing
+
+\setlength{\ABNTEXcitacaorecuo}{4cm}

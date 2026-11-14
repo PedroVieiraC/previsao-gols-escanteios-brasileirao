@@ -1,0 +1,54 @@
+\documentclass[
+    article,
+    12pt,
+    oneside,
+    a4paper,
+    english,
+    brazil,
+    sumario=tradicional
+]{abntex2}
+
+% Configurações e pacotes
+\input{configuration}
+
+\begin{document}
+
+\frenchspacing
+
+% ============================================================
+% ELEMENTOS PRÉ-TEXTUAIS
+% ============================================================
+
+\pretextual
+\thispagestyle{empty}
+
+\input{src/00.Capa}
+
+% ============================================================
+% ELEMENTOS TEXTUAIS
+% ============================================================
+
+\textual
+\pagenumbering{arabic}
+\pagestyle{simple}
+
+\input{src/01.Intro}
+\input{src/02.Related}
+\input{src/03.Method}
+\input{src/04.Results}
+\input{src/05.Discussion}
+\input{src/06.Conclusion}
+
+% ============================================================
+% ELEMENTOS PÓS-TEXTUAIS
+% ============================================================
+
+\postextual
+
+\renewcommand{\bibsection}{\centering\section*{REFERÊNCIAS}}
+\nocite{brasileiraoDatasetGithub,brazilianFootballMatches}
+\bibliography{referencias}
+
+\input{src/acknowledgements}
+
+\end{document}

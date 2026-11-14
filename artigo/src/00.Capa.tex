@@ -1,0 +1,51 @@
+\begin{center}
+    {\bfseries\Large Modelagem preditiva em partidas de futebol: Uma análise acerca de escanteios e gols }\footnote{Artigo científico elaborado para o trabalho de conclusão do curso de Engenharia de Computação do campus Nova Gameleira do Centro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG)}
+\end{center}
+
+%Uma linha entre título e autores
+\vspace{\onelineskip}
+
+
+% --- AUTORES ---
+\begin{center}
+    \bfseries Pedro Vieira Conceição\footnote{Graduando(a) em Engenharia de Computação no campus Nova Gameleira do Centro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG). pedrovieiratrab@gmail.com} \\
+    \bfseries Danilo Boechat Seufitelli\footnote{Orientador(a) do trabalho. Docente do Departamento de Computação do campus Nova Gameleira do Centro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG). danilobs@cefetmg.br}
+\end{center}
+
+% ---
+% Datas de submissão e aprovação - OBRIGATÓRIAS na NBR 6022:2018
+% Inserir após o título / antes do resumo
+% ---
+\begin{center}
+\small
+Submetido em: DD/MM/AAAA \quad\textbar\quad Aprovado em: DD/MM/AAAA \\
+DOI: 10.xxxxx/xxxxxxx \hspace{1em} (se houver)
+\end{center}
+
+\begin{resumoumacoluna}
+
+Este artigo avalia em que medida informações disponíveis antes de cada partida permitem prever o total de gols e o total de escanteios na Série A do Campeonato Brasileiro. Foram usadas as 3.040 partidas de 2017 a 2024, integradas a partir de uma base principal e de cinco fontes de apoio, nem todas independentes da principal. As variáveis preditoras, calculadas apenas com partidas anteriores, incluem médias recentes, índices de força (\textit{pi-ratings} e GAP) e informações de calendário e de contexto. A regressão de Poisson com penalização \textit{ridge}, o Random Forest e o XGBoost foram comparados com a média da liga em validação progressiva por temporada, com teste de 2019 a 2024, pela desviância de Poisson e, nas probabilidades de mais de 2,5 gols e de mais de 9,5 escanteios, pela perda logarítmica e pelo escore de Brier. O Random Forest reduziu a desviância em cerca de 1,7\% nos gols, e a redução resistiu a referências mais fortes que a média da liga. Nos escanteios, a redução de cerca de 0,9\% deixou de ser significativa contra a média corrente da liga: os modelos acompanham o nível de cada temporada, mas não distinguem as partidas entre si. Os modelos superaram a frequência histórica na linha de 2,5 gols, mas não na de 9,5 escanteios, em que a binomial negativa foi necessária para acomodar a sobredispersão. A formação tática não trouxe ganho. Conclui-se que o histórico pré-jogo traz sinal real, porém pequeno, nos gols e praticamente nenhum nos escanteios.
+
+\vspace{\onelineskip}
+
+\noindent
+\textbf{Palavras-chave}: futebol; Campeonato Brasileiro; previsão de gols; escanteios; aprendizado de máquina.
+
+\end{resumoumacoluna}
+
+\vspace{\onelineskip}
+
+\begin{center}
+    \textbf{\large Abstract}
+\end{center}
+
+\begin{otherlanguage*}{english}
+
+This article assesses how far information available before each match can predict the total number of goals and of corner kicks in the Brazilian Série A. The study covers the 3,040 matches from 2017 to 2024, integrated from a main dataset and five supporting sources, not all independent of the main one. The predictors, computed only from earlier matches, include recent averages, team strength ratings (pi-ratings and GAP ratings), and schedule and context information. Ridge-penalized Poisson regression, Random Forest, and XGBoost were compared with the league average in season-by-season walk-forward validation, with test seasons from 2019 to 2024, using the Poisson deviance and, for the probabilities of more than 2.5 goals and more than 9.5 corners, the log loss and the Brier score. Random Forest reduced the deviance by about 1.7\% for goals, and the reduction held against stronger benchmarks than the league average. For corners, the reduction of about 0.9\% was no longer significant against the current league average: the models track each season's level but do not tell matches apart. The models beat the historical frequency on the 2.5-goal line but not on the 9.5-corner line, where the negative binomial was needed to account for overdispersion. The tactical formation brought no gain. Pre-match history carries a real but small signal for goals and practically none for corners.
+
+\vspace{\onelineskip}
+
+\noindent
+\textbf{Keywords}: football; Brazilian Championship; goal prediction; corner kicks; machine learning.
+
+\end{otherlanguage*}

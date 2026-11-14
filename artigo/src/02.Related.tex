@@ -1,0 +1,74 @@
+\section{Trabalhos relacionados}\label{sec:Related}
+
+Os estudos de previsão no futebol podem ser agrupados em quatro linhas próximas a este trabalho: modelos estatísticos de contagem para gols e resultados, métodos de aprendizado de máquina, a previsão de estatísticas de partida como os escanteios e as aplicações ao Campeonato Brasileiro. Esta seção apresenta os trabalhos de cada linha, resume-os na Tabela~\ref{tab:relacionados} e, ao final, situa a presente pesquisa em relação a eles.
+
+\subsection{Modelos de contagem para gols e resultados}\label{subsec:RelPoisson}
+
+\citeonline{maher1982} propôs modelar os gols de cada equipe por distribuições de Poisson independentes, com parâmetros de força ofensiva e defensiva de cada equipe. Os testes de aderência mostraram desvios sistemáticos pequenos, o que indica que o modelo de Poisson independente descreve razoavelmente os placares; a versão bivariada, que admite correlação entre os gols das duas equipes, melhorou o ajuste.
+
+Motivados pela investigação de possíveis ineficiências no mercado de apostas de futebol inglês, \citeonline{dixoneColes1997} propuseram um modelo estatístico para estimar a distribuição do número de gols marcados pelas equipes em uma partida. O método baseia-se na distribuição de Poisson, incorporando parâmetros associados à força ofensiva e defensiva das equipes, além de uma correção para a dependência entre placares de baixa pontuação e uma ponderação temporal das partidas. A partir das probabilidades estimadas para os possíveis resultados, os autores obtiveram as respectivas cotações justas e as compararam com as cotações observadas no mercado, identificando oportunidades de apostas potencialmente lucrativas. Esse trabalho constitui uma referência fundamental para a aplicação de modelos de Poisson à previsão de gols no futebol, servindo como base para trabalhos posteriores que incorporam diferentes variáveis e técnicas de modelagem.
+
+\citeonline{goddard2005} comparou duas formas de prever o resultado de uma partida com 25 temporadas do futebol inglês: modelar os gols marcados e sofridos por regressão de Poisson bivariada ou modelar diretamente a vitória, o empate ou a derrota por regressão probit ordenada. O melhor desempenho veio de um modelo híbrido, que usa indicadores de desempenho calculados a partir dos gols como variáveis do modelo de resultados, mas a diferença entre as duas abordagens foi pequena.
+
+\citeonline{baio2010} propuseram um modelo hierárquico bayesiano para os gols, aplicado ao campeonato italiano de 1991--1992. Como o modelo hierárquico básico aproximava demais as estimativas das equipes entre si, os autores introduziram um modelo de mistura, que se ajustou melhor aos dados e foi testado também na temporada 2007--2008. \citeonline{tsokos2019} compararam extensões do modelo de Bradley-Terry, que modelam diretamente o resultado da partida, com um modelo hierárquico log-linear de Poisson para o placar. Os autores propuseram um esquema de validação temporal adequado a partidas ordenadas no tempo e concluíram que as duas abordagens têm desempenho semelhante. Mais recentemente, \citeonline{loukas2024} aplicaram a distribuição de Poisson ao número de gols de cada equipe, estimada a partir do desempenho histórico, para prever os resultados da Premier League inglesa na temporada 2022--2023.
+
+\subsection{Aprendizado de máquina}\label{subsec:RelML}
+
+A competição de previsão de resultados de 2017, organizada com a revista \textit{Machine Learning}, ofereceu aos participantes mais de 200 mil partidas de diversas ligas e reuniu trabalhos que testaram o limite de previsibilidade desse tipo de dado. \citeonline{berrar2019} desenvolveram duas formas de construir variáveis a partir do histórico das equipes: uma baseada no desempenho recente e outra baseada em índices de força aprendidos a partir dos resultados. O modelo de $k$ vizinhos mais próximos treinado com os índices de força teve o melhor desempenho, e um conjunto de modelos XGBoost trouxe ganho adicional pequeno. A principal conclusão é que o desempenho depende sobretudo de como o conhecimento do domínio é incorporado às variáveis. Na mesma competição, \citeonline{hubacek2019} compararam métodos relacionais com métodos baseados em variáveis construídas manualmente, entre elas índices de força das equipes, e, entre os métodos que testaram, obtiveram o melhor resultado com árvores de decisão combinadas por \textit{gradient boosting}.
+
+Entre os índices de força usados nessa competição estão os \textit{pi-ratings}, propostos por \citeonline{constantinouFenton2013}. Cada equipe recebe um índice para as partidas em casa e outro para as partidas fora, revistos após cada jogo conforme a diferença entre o saldo de gols observado e o esperado pelos índices; uma taxa de aprendizado controla o peso da partida mais recente, e uma segunda taxa transfere parte da revisão de um índice para o outro. No original, uma função logarítmica reduz o peso de cada gol adicional de saldo. \citeonline{constantinou2022} usou uma versão simplificada, sem essa função, em que o índice passa a representar diretamente o saldo de gols esperado, e combinou-a com uma rede bayesiana para avaliar o mercado de apostas com handicap asiático. Na competição de previsão de 2023, \citeonline{yeung2024} investigaram a seleção de variáveis para árvores de \textit{gradient boosting}, com conjuntos de variáveis baseados em \textit{pi-ratings}, e propuseram um modelo de aprendizado profundo para as probabilidades de vitória, empate e derrota.
+
+\citeonline{groll2019} combinaram Random Forest com estimativas de força das equipes obtidas por modelos de Poisson sobre resultados anteriores. Avaliado nas Copas do Mundo de 2002 a 2014, o modelo híbrido superou seus componentes isolados e a regressão de Poisson convencional, e, na previsão da Copa de 2018, superou também as cotações das casas de apostas. Esse resultado sugere que modelos estatísticos de contagem e métodos de árvores podem ser complementares.
+
+\citeonline{ivanBaragano2025} aplicaram Random Forest e XGBoost para prever se uma posse de bola na Copa do Mundo Feminina de 2023 terminaria em gol ou em finalização, a partir de 2.346 posses da fase eliminatória. Com o gol presente em cerca de 1\% das posses, os modelos tiveram bom desempenho nos dados rebalanceados, mas não identificaram gols nos dados originais de teste. Os autores também apontaram que o resultado final da partida, usado como variável, era uma provável fonte de vazamento de informação. Esses dois pontos, a raridade do gol e o vazamento, orientam as escolhas metodológicas deste trabalho.
+
+\subsection{Estatísticas de partida e escanteios}\label{subsec:RelEscanteios}
+
+\citeonline{wheatcroft2021} partiu da observação de que as estatísticas de uma partida, se conhecidas antecipadamente, seriam muito informativas sobre o resultado. Como elas só existem depois do jogo, o autor propôs prevê-las antes, por meio de índices de desempenho ofensivo das equipes e de um modelo de Poisson bivariado, e mostrou que essas previsões acrescentam informação às cotações de apostas. A distinção entre a estatística da partida-alvo, que não pode ser usada como entrada, e a sua previsão a partir do histórico é a mesma adotada neste trabalho.
+
+Para prever se uma partida terá mais de 2,5 gols, \citeonline{wheatcroft2020} definiu os índices GAP (\textit{Generalised Attacking Performance}), inspirados nos \textit{pi-ratings}. Cada equipe recebe quatro índices, de ataque e de defesa, em casa e fora, alimentados por uma medida de desempenho ofensivo escolhida pelo usuário, como gols, chutes, chutes no alvo ou escanteios. A produção ofensiva esperada de uma equipe é a média entre o seu índice de ataque e o índice de defesa do adversário; ao separar ataque e defesa, os índices tornam-se mais adequados para prever o total de gols do que os \textit{pi-ratings}, que descrevem apenas a diferença entre as equipes. Em dez ligas europeias, os índices construídos com chutes e escanteios previram melhor que os construídos apenas com gols.
+
+Os escanteios receberam menos atenção que os gols. \citeonline{yip2024} propuseram um modelo de regressão com distribuição de Poisson composta para prever o número de escanteios, motivados pela observação de que eles tendem a ocorrer em sequências dentro de uma mesma partida. O modelo, em versão bayesiana, considera a correlação entre partidas e incorpora as cotações de apostas de outros mercados, que melhoraram o desempenho preditivo.
+
+\subsection{Campeonato Brasileiro}\label{subsec:RelBrasileiro}
+
+\citeonline{santana2019} previram a Série A de 2017 em duas etapas. Na primeira, regressão logística politômica, máquinas de vetores de suporte e Random Forest estimaram as probabilidades de vitória do mandante, empate e vitória do visitante; o Random Forest teve desempenho ruim. Na segunda, um modelo de Poisson autorregressivo com covariáveis exógenas previu os gols de cada equipe, considerando a dependência entre partidas sucessivas e a sobredispersão das contagens, com resultados semelhantes aos dos classificadores. \citeonline{ribeiro2025} compararam dez variações do modelo de Poisson na Série A de 2022, incluindo versões hierárquicas, com sobredispersão, com parâmetros que variam no tempo e com informação a priori da temporada anterior. O modelo de Poisson dinâmico com inflação de zeros obteve o melhor desempenho na maior parte das métricas.
+
+\begin{table}[htb]
+\IBGEtab{%
+  \caption{Síntese dos trabalhos relacionados}\label{tab:relacionados}
+}{%
+  \begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{6.0cm}}
+    \toprule
+    Trabalho & Alvo & Métodos \\
+    \midrule
+    \citeonline{maher1982} & Gols & Poisson independente e bivariado \\
+    \citeonline{dixoneColes1997} & Gols & Poisson com correção para placares baixos \\
+    \citeonline{goddard2005} & Gols e resultado & Poisson bivariado e probit ordenado \\
+    \citeonline{baio2010} & Gols & Poisson hierárquico bayesiano \\
+    \citeonline{tsokos2019} & Resultado & Bradley-Terry e Poisson hierárquico \\
+    \citeonline{loukas2024} & Resultado & Poisson \\
+    \citeonline{berrar2019} & Resultado & $k$ vizinhos mais próximos e XGBoost \\
+    \citeonline{hubacek2019} & Resultado & \textit{Gradient boosting} \\
+    \citeonline{constantinouFenton2013} & Força das equipes & \textit{Pi-ratings} \\
+    \citeonline{constantinou2022} & Saldo de gols & \textit{Pi-ratings} simplificados e rede bayesiana \\
+    \citeonline{yeung2024} & Resultado & \textit{Gradient boosting} com \textit{pi-ratings} e aprendizado profundo \\
+    \citeonline{groll2019} & Gols & Random Forest com estimativas de Poisson \\
+    \citeonline{ivanBaragano2025} & Gol e finalização & Random Forest e XGBoost \\
+    \citeonline{wheatcroft2021} & Estatísticas e resultado & Índices de desempenho e Poisson bivariado \\
+    \citeonline{wheatcroft2020} & Total de gols & Índices GAP e regressão logística \\
+    \citeonline{yip2024} & Escanteios & Poisson composta bayesiana \\
+    \citeonline{santana2019} & Resultado e gols & Classificadores e Poisson autorregressivo \\
+    \citeonline{ribeiro2025} & Gols & Variações de Poisson bayesianas \\
+    \midrule
+    Este trabalho & Gols e escanteios & Poisson, Random Forest e XGBoost \\
+    \bottomrule
+  \end{tabular}%
+}{%
+  \fonte{Elaborada pelo autor (2026).}
+}
+\end{table}
+
+\subsection{Posicionamento deste trabalho}\label{subsec:RelPosicionamento}
+
+A maior parte dos trabalhos apresentados trata do resultado da partida ou dos gols, em ligas europeias ou em torneios internacionais. Os estudos sobre o Campeonato Brasileiro avaliam uma única temporada, e o estudo dedicado aos escanteios utiliza informações de apostas. Este trabalho modela separadamente as contagens de gols e de escanteios em oito temporadas da Série A do Campeonato Brasileiro, usando apenas o histórico das equipes disponível antes de cada partida, incluindo índices de força nos moldes dos \textit{pi-ratings} e dos índices GAP, e compara a regressão de Poisson com Random Forest e XGBoost sob validação temporal.

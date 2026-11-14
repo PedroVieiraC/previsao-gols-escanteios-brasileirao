@@ -1,0 +1,29 @@
+\section{Introdução}\label{sec:Intro}
+
+\subsection{Contextualização}
+
+Embora diferentes formas de futebol já fossem praticadas, a consolidação do futebol de associação ocorreu em 1863, com a criação da Football Association; desde então, o esporte ampliou sua popularidade e difusão mundial \cite{freeman2023}. No Brasil, o futebol, inicialmente uma forma de lazer ligada à identidade comunitária, tornou-se também uma atividade econômica relevante, organizada segundo a lógica de mercado \cite{goncalvesCarvalho2006}. Apesar de suas regras relativamente simples, a dinâmica de uma partida varia conforme as estratégias coletivas e as capacidades individuais dos jogadores. Essas adaptações ocorrem em diferentes escalas e influenciam a organização e o comportamento das equipes em campo \cite{clavijo2022}.
+
+Diante dessa variabilidade, a análise de dados ganha relevância por apoiar decisões em evidências empíricas, complementando a experiência de atletas, comissões técnicas e pesquisadores. A coleta sistemática de informações sobre partidas permite descrever seus eventos com maior detalhe e investigar padrões que não são evidentes apenas pela observação. Nesse contexto, estudos de previsão probabilística de resultados futebolísticos demonstram como dados históricos e modelos quantitativos podem ser usados para estimar desfechos incertos \cite{louzada2016}.
+
+\subsection{Modelagem preditiva de gols e escanteios}
+
+A modelagem de gols possui referências baseadas em contagens e regressão. \citeonline{dixoneColes1997} propuseram um modelo de placares baseado na distribuição de Poisson, com ajustes para a dinâmica das equipes e para resultados de baixa pontuação; \citeonline{goddard2005} estudou modelos de regressão para estimar gols e resultados de partidas. Em abordagens de aprendizado de máquina, \citeonline{berrar2019} investigaram a incorporação de conhecimento do domínio na previsão de resultados. Para escanteios, \citeonline{yip2024} analisaram a previsão de sua quantidade por meio de uma distribuição Poisson composta. Como gols e escanteios diferem em frequência e distribuição, a escolha dos modelos e das métricas deve considerar cada alvo separadamente.
+
+\subsection{Problema de pesquisa}
+
+As fontes utilizadas no estudo reúnem as partidas da Série A do Campeonato Brasileiro entre 2017 e 2024, mas diferem em cobertura, esquema e disponibilidade de estatísticas. A integração exige padronizar identificadores, equipes e datas e verificar duplicidades e valores ausentes antes da modelagem. Em particular, a ausência de um registro de escanteios não pode ser interpretada como zero: cada observação precisa ser validada para o alvo correspondente. Essa etapa define uma amostra consistente para comparar os modelos e delimita as conclusões ao período e às variáveis efetivamente disponíveis.
+
+Assim, torna-se relevante investigar previsões probabilísticas da quantidade de gols e de escanteios com informações históricas disponíveis antes da partida. A questão de pesquisa é: em que medida modelos estatísticos e de aprendizado de máquina, usando apenas informações disponíveis antes do início de cada partida, podem estimar as contagens de gols e escanteios no Campeonato Brasileiro?
+
+\subsection{Objetivos}
+
+O objetivo geral é comparar modelos para esses dois alvos e caracterizar seu desempenho sob uma avaliação temporal. Os objetivos específicos são: organizar e validar os dados das partidas finalizadas; definir os alvos e as variáveis preditoras; construir referências estatísticas e modelos de aprendizado de máquina; comparar suas estimativas em temporadas posteriores às usadas no treinamento; e avaliar as probabilidades de uma partida passar das linhas de 2,5 gols e de 9,5 escanteios.
+
+\subsection{Metodologia e contribuições}
+
+A pesquisa é quantitativa, aplicada e retrospectiva, com dados secundários do Brasileirão Dataset \cite{brasileiraoDatasetGithub}, validados e complementados pelo Sofascore, por dois conjuntos de dados do Kaggle \cite{brazilianFootballMatches}, pelo FBref e pelo Football-Data. A delimitação do problema, dos dados e dos procedimentos de avaliação seguiu princípios de metodologia de pesquisa em Computação e de pesquisa científica \cite{wazlawick2014,marconiLakatos2021}. Após a padronização de datas, equipes e identificadores, as variáveis preditoras foram calculadas exclusivamente a partir de partidas anteriores, entre elas médias recentes, índices de força como os \textit{pi-ratings} e os índices GAP, e informações de calendário e de contexto conhecidas antes do jogo. Estatísticas finais da partida que se deseja prever, como os próprios escanteios, as finalizações ou a posse de bola, foram excluídas das entradas, o que previne o vazamento de informação. Para as contagens, foram comparados uma referência ingênua, a regressão de Poisson com penalização \textit{ridge}, o Random Forest e o XGBoost, em validação progressiva por temporada, com teste de 2019 a 2024. O desempenho foi medido pelo erro absoluto médio (MAE), pela raiz do erro quadrático médio (RMSE) e pela desviância de Poisson; as probabilidades de passar das linhas, pela perda logarítmica e pelo escore de Brier.
+
+Não se partiu da hipótese de que um algoritmo específico seria superior. A contribuição é um procedimento reproduzível, sem vazamento temporal, com métricas adequadas à frequência diferente de gols e escanteios, e uma medida de quanto as informações disponíveis antes da partida permitem prever cada alvo no Campeonato Brasileiro. As conclusões ficam delimitadas ao período, à competição e às fontes efetivamente usadas.
+
+O restante do artigo está organizado da seguinte forma: a Seção~\ref{sec:Related} apresenta os trabalhos relacionados; a Seção~\ref{sec:Method} descreve os dados, as variáveis, os modelos e a avaliação; a Seção~\ref{sec:Results} apresenta os resultados; a Seção~\ref{sec:Discussion} os discute; e a Seção~\ref{sec:Conclusion} traz as considerações finais.
