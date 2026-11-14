@@ -1,0 +1,247 @@
+alvo,teste,coluna,grupo,shap_abs
+gols,2019,hist_gols_esp_m,média da temporada,0.009729903
+gols,2019,hist_gols_esp_v,média da temporada,0.0040525594
+gols,2019,j5_geral_gols_esp_m,forma recente,0.0020602297
+gols,2019,j5_geral_gols_esp_v,forma recente,0.005502235
+gols,2019,j5_geral_chutes_no_alvo_esp_m,forma recente,0.00560015
+gols,2019,j5_geral_chutes_no_alvo_esp_v,forma recente,0.00065938814
+gols,2019,pi100_dif,pi-rating,0.019143721
+gols,2019,gap100_gols_m,GAP,0.014477761
+gols,2019,gap100_gols_v,GAP,0.0057097026
+gols,2019,gap100_chutes_no_alvo_m,GAP,0.006703237
+gols,2019,gap100_chutes_no_alvo_v,GAP,0.0073483544
+gols,2019,dias_descanso_m,descanso,0.003241727
+gols,2019,tecnico_trocas_temp_m,técnico,0.0015115725
+gols,2019,dias_descanso_v,descanso,0.015652219
+gols,2019,tecnico_trocas_temp_v,técnico,0.0
+gols,2019,sem_publico,sem público,0.0
+gols,2019,promovido_m,promovido,0.0055214926
+gols,2019,tecnico_jogos_m,técnico,0.0013498415
+gols,2019,promovido_v,promovido,0.0041313777
+gols,2019,tecnico_jogos_v,técnico,0.006815701
+gols,2020,hist_gols_esp_m,média da temporada,0.0111318
+gols,2020,hist_gols_esp_v,média da temporada,0.0024561188
+gols,2020,j5_geral_gols_esp_m,forma recente,0.0
+gols,2020,j5_geral_gols_esp_v,forma recente,0.0
+gols,2020,j5_geral_chutes_no_alvo_esp_m,forma recente,0.015137766
+gols,2020,j5_geral_chutes_no_alvo_esp_v,forma recente,0.0047899354
+gols,2020,pi100_dif,pi-rating,0.043889448
+gols,2020,gap100_gols_m,GAP,0.0038253893
+gols,2020,gap100_gols_v,GAP,0.005835076
+gols,2020,gap100_chutes_no_alvo_m,GAP,0.008196149
+gols,2020,gap100_chutes_no_alvo_v,GAP,0.011773673
+gols,2020,dias_descanso_m,descanso,0.002474515
+gols,2020,tecnico_trocas_temp_m,técnico,0.003108608
+gols,2020,dias_descanso_v,descanso,0.0067677437
+gols,2020,tecnico_trocas_temp_v,técnico,0.0009511253
+gols,2020,sem_publico,sem público,0.0
+gols,2020,promovido_m,promovido,0.0046539437
+gols,2020,tecnico_jogos_m,técnico,0.005741486
+gols,2020,promovido_v,promovido,0.002392231
+gols,2020,tecnico_jogos_v,técnico,0.0056176153
+gols,2021,hist_gols_esp_m,média da temporada,0.012060208
+gols,2021,hist_gols_esp_v,média da temporada,0.0010867589
+gols,2021,j10_geral_gols_esp_m,forma recente,0.0044131293
+gols,2021,j10_geral_gols_esp_v,forma recente,0.0
+gols,2021,j10_geral_chutes_no_alvo_esp_m,forma recente,0.0064874096
+gols,2021,j10_geral_chutes_no_alvo_esp_v,forma recente,0.0032095194
+gols,2021,pi100_dif,pi-rating,0.027988551
+gols,2021,gap100_gols_m,GAP,0.010343386
+gols,2021,gap100_gols_v,GAP,0.0049584815
+gols,2021,gap100_chutes_no_alvo_m,GAP,0.002025203
+gols,2021,gap100_chutes_no_alvo_v,GAP,0.017720759
+gols,2021,dias_descanso_m,descanso,0.0022286284
+gols,2021,tecnico_trocas_temp_m,técnico,0.0009778055
+gols,2021,dias_descanso_v,descanso,0.00038311552
+gols,2021,tecnico_trocas_temp_v,técnico,0.0010739784
+gols,2021,sem_publico,sem público,0.0
+gols,2021,promovido_m,promovido,0.0
+gols,2021,tecnico_jogos_m,técnico,0.006653338
+gols,2021,promovido_v,promovido,0.0
+gols,2021,tecnico_jogos_v,técnico,0.008712614
+gols,2022,hist_gols_esp_m,média da temporada,0.018437045
+gols,2022,hist_gols_esp_v,média da temporada,0.017207105
+gols,2022,j5_geral_gols_esp_m,forma recente,0.005629574
+gols,2022,j5_geral_gols_esp_v,forma recente,0.0046463734
+gols,2022,j5_geral_chutes_no_alvo_esp_m,forma recente,0.009634529
+gols,2022,j5_geral_chutes_no_alvo_esp_v,forma recente,0.009731123
+gols,2022,pi100_dif,pi-rating,0.024041904
+gols,2022,gap100_gols_m,GAP,0.031263802
+gols,2022,gap100_gols_v,GAP,0.020013558
+gols,2022,gap100_chutes_no_alvo_m,GAP,0.02499416
+gols,2022,gap100_chutes_no_alvo_v,GAP,0.035422143
+gols,2022,dias_descanso_m,descanso,0.010531038
+gols,2022,tecnico_trocas_temp_m,técnico,0.0057632946
+gols,2022,dias_descanso_v,descanso,0.010003846
+gols,2022,tecnico_trocas_temp_v,técnico,0.0087157935
+gols,2022,sem_publico,sem público,0.0019942848
+gols,2022,promovido_m,promovido,0.00509687
+gols,2022,tecnico_jogos_m,técnico,0.0251534
+gols,2022,promovido_v,promovido,0.0017151012
+gols,2022,tecnico_jogos_v,técnico,0.018247401
+gols,2023,hist_gols_esp_m,média da temporada,0.016038312
+gols,2023,hist_gols_esp_v,média da temporada,0.0072836527
+gols,2023,j10_mando_gols_esp_m,forma recente,0.0013769536
+gols,2023,j10_mando_gols_esp_v,forma recente,0.0
+gols,2023,j10_mando_chutes_no_alvo_esp_m,forma recente,0.011476192
+gols,2023,j10_mando_chutes_no_alvo_esp_v,forma recente,0.017206566
+gols,2023,pi100_dif,pi-rating,0.029156266
+gols,2023,gap100_gols_m,GAP,0.027997062
+gols,2023,gap100_gols_v,GAP,0.01119873
+gols,2023,gap100_chutes_no_alvo_m,GAP,0.004435106
+gols,2023,gap100_chutes_no_alvo_v,GAP,0.0040129186
+gols,2023,dias_descanso_m,descanso,0.00025875206
+gols,2023,tecnico_trocas_temp_m,técnico,0.0036020186
+gols,2023,dias_descanso_v,descanso,0.0017126587
+gols,2023,tecnico_trocas_temp_v,técnico,0.0
+gols,2023,sem_publico,sem público,0.0
+gols,2023,promovido_m,promovido,0.0
+gols,2023,tecnico_jogos_m,técnico,0.006626718
+gols,2023,promovido_v,promovido,0.0
+gols,2023,tecnico_jogos_v,técnico,0.018550044
+gols,2024,hist_gols_esp_m,média da temporada,0.011929656
+gols,2024,hist_gols_esp_v,média da temporada,0.002647952
+gols,2024,j10_mando_gols_esp_m,forma recente,0.0030159713
+gols,2024,j10_mando_gols_esp_v,forma recente,0.0
+gols,2024,j10_mando_chutes_no_alvo_esp_m,forma recente,0.011096022
+gols,2024,j10_mando_chutes_no_alvo_esp_v,forma recente,0.012784817
+gols,2024,pi100_dif,pi-rating,0.025145805
+gols,2024,gap100_gols_m,GAP,0.022716256
+gols,2024,gap100_gols_v,GAP,0.01281186
+gols,2024,gap100_chutes_no_alvo_m,GAP,0.013492609
+gols,2024,gap100_chutes_no_alvo_v,GAP,0.0127278995
+gols,2024,dias_descanso_m,descanso,0.0033598053
+gols,2024,tecnico_trocas_temp_m,técnico,0.0
+gols,2024,dias_descanso_v,descanso,0.0021849512
+gols,2024,tecnico_trocas_temp_v,técnico,0.003106689
+gols,2024,sem_publico,sem público,0.0
+gols,2024,promovido_m,promovido,0.0
+gols,2024,tecnico_jogos_m,técnico,0.0014058409
+gols,2024,promovido_v,promovido,0.0
+gols,2024,tecnico_jogos_v,técnico,0.011565624
+escanteios,2019,hist_escanteios_esp_m,média da temporada,0.0062836097
+escanteios,2019,hist_escanteios_esp_v,média da temporada,0.0
+escanteios,2019,j5_geral_escanteios_esp_m,forma recente,0.0
+escanteios,2019,j5_geral_escanteios_esp_v,forma recente,0.0040132445
+escanteios,2019,j5_geral_chutes_esp_m,forma recente,0.0012072427
+escanteios,2019,j5_geral_chutes_esp_v,forma recente,0.0033854246
+escanteios,2019,pi100_dif,pi-rating,0.0059873513
+escanteios,2019,gap100_escanteios_m,GAP,0.0055107456
+escanteios,2019,gap100_escanteios_v,GAP,0.004554178
+escanteios,2019,gap100_chutes_escanteios_m,GAP,0.003982195
+escanteios,2019,gap100_chutes_escanteios_v,GAP,0.0030686758
+escanteios,2019,dias_descanso_m,descanso,0.002910285
+escanteios,2019,tecnico_trocas_temp_m,técnico,0.0036238036
+escanteios,2019,dias_descanso_v,descanso,0.00623572
+escanteios,2019,tecnico_trocas_temp_v,técnico,0.0016443272
+escanteios,2019,sem_publico,sem público,0.0
+escanteios,2019,meio_frente_m,formação,5.6696616e-05
+escanteios,2019,meio_frente_v,formação,0.0
+escanteios,2019,promovido_m,promovido,0.0011145299
+escanteios,2019,tecnico_jogos_m,técnico,0.006710325
+escanteios,2019,promovido_v,promovido,0.00013136154
+escanteios,2019,tecnico_jogos_v,técnico,0.0034427731
+escanteios,2020,hist_escanteios_esp_m,média da temporada,0.0009936969
+escanteios,2020,hist_escanteios_esp_v,média da temporada,0.0019604815
+escanteios,2020,d3_geral_escanteios_esp_m,forma recente,0.0066698254
+escanteios,2020,d3_geral_escanteios_esp_v,forma recente,0.00013127721
+escanteios,2020,d3_geral_chutes_esp_m,forma recente,0.0026729295
+escanteios,2020,d3_geral_chutes_esp_v,forma recente,0.0018575947
+escanteios,2020,pi50_dif,pi-rating,0.002326419
+escanteios,2020,gap100_escanteios_m,GAP,0.0011410856
+escanteios,2020,gap100_escanteios_v,GAP,0.0019440445
+escanteios,2020,gap100_chutes_escanteios_m,GAP,0.001362191
+escanteios,2020,gap100_chutes_escanteios_v,GAP,0.0006712896
+escanteios,2020,dias_descanso_m,descanso,0.0016243394
+escanteios,2020,tecnico_trocas_temp_m,técnico,0.0
+escanteios,2020,dias_descanso_v,descanso,0.00084791466
+escanteios,2020,tecnico_trocas_temp_v,técnico,0.0
+escanteios,2020,sem_publico,sem público,0.0
+escanteios,2020,meio_frente_m,formação,0.0
+escanteios,2020,meio_frente_v,formação,0.0
+escanteios,2020,promovido_m,promovido,0.0
+escanteios,2020,tecnico_jogos_m,técnico,0.0022651253
+escanteios,2020,promovido_v,promovido,0.0006086815
+escanteios,2020,tecnico_jogos_v,técnico,0.0024816052
+escanteios,2021,hist_escanteios_esp_m,média da temporada,0.005856284
+escanteios,2021,hist_escanteios_esp_v,média da temporada,0.0022169042
+escanteios,2021,j10_mando_escanteios_esp_m,forma recente,0.0033047379
+escanteios,2021,j10_mando_escanteios_esp_v,forma recente,0.002275372
+escanteios,2021,j10_mando_chutes_esp_m,forma recente,0.002910995
+escanteios,2021,j10_mando_chutes_esp_v,forma recente,0.003978894
+escanteios,2021,pi50_dif,pi-rating,0.00401038
+escanteios,2021,gap100_escanteios_m,GAP,0.0045400374
+escanteios,2021,gap100_escanteios_v,GAP,0.0029903445
+escanteios,2021,gap100_chutes_escanteios_m,GAP,0.0023690797
+escanteios,2021,gap100_chutes_escanteios_v,GAP,0.0017610379
+escanteios,2021,dias_descanso_m,descanso,0.0015940893
+escanteios,2021,tecnico_trocas_temp_m,técnico,0.0012677399
+escanteios,2021,dias_descanso_v,descanso,0.0040300405
+escanteios,2021,tecnico_trocas_temp_v,técnico,0.0019515675
+escanteios,2021,sem_publico,sem público,0.0020121953
+escanteios,2021,meio_frente_m,formação,8.9177614e-05
+escanteios,2021,meio_frente_v,formação,6.834667e-05
+escanteios,2021,promovido_m,promovido,0.0020262254
+escanteios,2021,tecnico_jogos_m,técnico,0.0015221208
+escanteios,2021,promovido_v,promovido,0.0016285141
+escanteios,2021,tecnico_jogos_v,técnico,0.0021718533
+escanteios,2022,hist_escanteios_esp_m,média da temporada,0.006972797
+escanteios,2022,hist_escanteios_esp_v,média da temporada,0.0021831263
+escanteios,2022,j10_mando_escanteios_esp_m,forma recente,0.0029586582
+escanteios,2022,j10_mando_escanteios_esp_v,forma recente,0.0030418118
+escanteios,2022,j10_mando_chutes_esp_m,forma recente,0.0033631995
+escanteios,2022,j10_mando_chutes_esp_v,forma recente,0.0036876618
+escanteios,2022,pi50_dif,pi-rating,0.003797171
+escanteios,2022,gap100_escanteios_m,GAP,0.0045721037
+escanteios,2022,gap100_escanteios_v,GAP,0.0039114854
+escanteios,2022,gap100_chutes_escanteios_m,GAP,0.00303183
+escanteios,2022,gap100_chutes_escanteios_v,GAP,0.0015519614
+escanteios,2022,dias_descanso_m,descanso,0.0016920707
+escanteios,2022,tecnico_trocas_temp_m,técnico,0.00071076956
+escanteios,2022,dias_descanso_v,descanso,0.00383103
+escanteios,2022,tecnico_trocas_temp_v,técnico,0.0012284631
+escanteios,2022,sem_publico,sem público,0.001064118
+escanteios,2022,promovido_m,promovido,0.0009724843
+escanteios,2022,tecnico_jogos_m,técnico,0.0018887095
+escanteios,2022,promovido_v,promovido,0.0010587204
+escanteios,2022,tecnico_jogos_v,técnico,0.0020908273
+escanteios,2023,hist_escanteios_esp_m,média da temporada,0.008594591
+escanteios,2023,hist_escanteios_esp_v,média da temporada,0.0017168234
+escanteios,2023,j10_mando_escanteios_esp_m,forma recente,0.0028810005
+escanteios,2023,j10_mando_escanteios_esp_v,forma recente,0.00208065
+escanteios,2023,j10_mando_chutes_esp_m,forma recente,0.0024187781
+escanteios,2023,j10_mando_chutes_esp_v,forma recente,0.0039595934
+escanteios,2023,pi50_dif,pi-rating,0.004184483
+escanteios,2023,gap100_escanteios_m,GAP,0.0048143547
+escanteios,2023,gap100_escanteios_v,GAP,0.0016146245
+escanteios,2023,gap100_chutes_escanteios_m,GAP,0.0037508789
+escanteios,2023,gap100_chutes_escanteios_v,GAP,0.0025121989
+escanteios,2023,dias_descanso_m,descanso,0.0019493756
+escanteios,2023,tecnico_trocas_temp_m,técnico,0.00039498994
+escanteios,2023,dias_descanso_v,descanso,0.005072112
+escanteios,2023,tecnico_trocas_temp_v,técnico,0.0009968168
+escanteios,2023,sem_publico,sem público,0.001415503
+escanteios,2023,promovido_m,promovido,0.00041917554
+escanteios,2023,tecnico_jogos_m,técnico,0.0017589809
+escanteios,2023,promovido_v,promovido,0.00055886206
+escanteios,2023,tecnico_jogos_v,técnico,0.0031560578
+escanteios,2024,hist_escanteios_esp_m,média da temporada,0.0053886375
+escanteios,2024,hist_escanteios_esp_v,média da temporada,0.0023252585
+escanteios,2024,d10_geral_escanteios_esp_m,forma recente,0.0021991986
+escanteios,2024,d10_geral_escanteios_esp_v,forma recente,0.0017436882
+escanteios,2024,d10_geral_chutes_esp_m,forma recente,0.0053624553
+escanteios,2024,d10_geral_chutes_esp_v,forma recente,0.0011225125
+escanteios,2024,pi50_dif,pi-rating,0.0036136718
+escanteios,2024,gap100_escanteios_m,GAP,0.003187325
+escanteios,2024,gap100_escanteios_v,GAP,0.0025774464
+escanteios,2024,gap100_chutes_escanteios_m,GAP,0.0024751152
+escanteios,2024,gap100_chutes_escanteios_v,GAP,0.0025916647
+escanteios,2024,dias_descanso_m,descanso,0.0032178576
+escanteios,2024,tecnico_trocas_temp_m,técnico,0.00040831763
+escanteios,2024,dias_descanso_v,descanso,0.0020520075
+escanteios,2024,tecnico_trocas_temp_v,técnico,0.0
+escanteios,2024,sem_publico,sem público,0.0011308906
+escanteios,2024,promovido_m,promovido,0.0014327575
+escanteios,2024,tecnico_jogos_m,técnico,0.0026561727
+escanteios,2024,promovido_v,promovido,0.00055180205
+escanteios,2024,tecnico_jogos_v,técnico,0.003969736
