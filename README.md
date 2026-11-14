@@ -54,3 +54,6 @@ python -m src.modelos.referencias       # referências mais fortes (temporada an
 python -m src.modelos.figuras           # figuras do artigo em artigo/figures/
 ```
 A rodada 4 leva horas (centenas de combinações por dobra, em paralelo) e retoma de um cache em `results/modelos/rodada4_cache/` se for interrompida. Os resultados da 4c já estão em `results/modelos/`; rodar essa etapa de novo sobrescreve os CSVs. `ETAPA` (`src/modelos/walkforward.py`) vale `rodada4c` por padrão; `TCC_ETAPA=rodada4d` roda a análise de sensibilidade. Os CSVs de validação, grandes, não estão versionados.
+
+## Fluxo de trabalho com LLM
+Este projeto foi conduzido com o Claude Code como assistente de programação e redação, sob regras escritas (vazamento, validação cronológica, decisões do autor), skills próprias, sessões paralelas e uma revisão crítica independente. A descrição, com as instruções de projeto e duas skills de exemplo, está em [`fluxo-llm/`](fluxo-llm/README.md).
