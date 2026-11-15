@@ -44,12 +44,12 @@ pip install -r requirements.txt
 python -m unittest discover -s tests -v
 python -m src.features.historico        # confere a leitura dos dados e uma feature
 python -m src.modelos.tabela            # monta a tabela de modelagem (265 colunas de base)
-python -m src.modelos.walkforward       # rodada 1: média da liga, Poisson e binomial negativa
-python -m src.modelos.rodada2           # rodada 2: seleção estável e Poisson ridge
+python -m src.modelos.walkforward       # rodada 1: média da liga, Poisson e binomial negativa (~10 min)
+python -m src.modelos.rodada2           # rodada 2: seleção estável e Poisson ridge (~10 min)
 python -m src.modelos.rodada3           # rodada 3: Random Forest e XGBoost
 python -m src.modelos.rodada4           # rodada 4c (final): grades amplas; leva horas
-python -m src.modelos.conjunto          # combinação das previsões
-python -m src.modelos.analise           # bootstrap por blocos, permutação, SHAP, probabilidades
+python -m src.modelos.conjunto          # combinação das previsões (alguns minutos)
+python -m src.modelos.analise           # bootstrap por blocos, permutação, SHAP, probabilidades (alguns minutos)
 python -m src.modelos.referencias       # referências mais fortes (temporada anterior e corrente)
 python -m src.modelos.figuras           # figuras do artigo em artigo/figures/
 ```

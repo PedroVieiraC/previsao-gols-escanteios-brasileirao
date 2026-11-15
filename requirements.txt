@@ -5,3 +5,4 @@ scikit-learn==1.9.0
 xgboost==3.4.0
 statsmodels==0.15.0  # binomial negativa e teste de dispersão
 matplotlib==3.11.1
+psutil==7.2.2  # prioridade e memória na rodada 4
