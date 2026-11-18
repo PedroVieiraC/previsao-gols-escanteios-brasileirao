@@ -1,0 +1,8 @@
+title: "Previsão pré-jogo de gols e escanteios no Brasileirão"
+summary: "TCC: quanto dos gols e escanteios de uma partida da Série A (2017–2024) dá para prever só com informação anterior ao jogo, comparado a referências ingênuas."
+category: ml
+problem: "Medir quanto do total de gols e de escanteios de uma partida é previsível antes do jogo, sem vazamento de informação."
+approach: "Variáveis pré-jogo com testes de vazamento, validação walk-forward por temporada (teste 2019–2024), Poisson ridge, Random Forest e XGBoost, bootstrap por blocos de rodada."
+results: "Em 2.280 partidas de teste, a deviance de Poisson para gols foi 1,0574 (Random Forest) contra 1,0759 da média da liga; para escanteios, 1,1731 contra 1,1838. Ganho pequeno nos dois alvos."
+stack: [Python, pandas, scikit-learn, XGBoost, LaTeX]
+status: completed
