@@ -12,3 +12,5 @@ results/modelos/rodada4_cache/
 *.bbl
 *.blg
 *.synctex.gz
+data/norm_copa_brasil.csv
+data/tb_tecnicos_depara.csv

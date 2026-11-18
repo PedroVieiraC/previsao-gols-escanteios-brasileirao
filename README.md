@@ -3,7 +3,7 @@
 Quanto do total de gols e do total de escanteios de uma partida da Série A (2017–2024) dá para prever com informação disponível antes do jogo, e o quanto isso supera referências ingênuas? Trabalho de conclusão de curso; o artigo em LaTeX está em `artigo/`.
 
 ## Dados
-3.040 partidas da Série A de 2017 a 2024 (380 por temporada), integradas pelo autor a partir de bases públicas de partidas e de estatísticas. Os CSVs estão em `data/` e o esquema em `data/README.md`.
+3.040 partidas da Série A de 2017 a 2024 (380 por temporada), integradas pelo autor a partir de bases públicas de partidas e de estatísticas. Só a base principal (`data/tb_main_brasileirao_tcc.csv`) é versionada, com o esquema em `data/README.md`; as variáveis de calendário/Copa do Brasil e de técnicos exigem arquivos locais não versionados (`norm_copa_brasil.csv`, `tb_tecnicos_depara.csv`).
 
 ## Método
 - **Variáveis pré-jogo, sem vazamento.** Placar, escanteios, chutes e posse da partida-alvo nunca entram; só o histórico de jogos anteriores, ordenado por data e hora. Médias da temporada, janelas de 5 e 10 jogos e médias com decaimento exponencial, todas encolhidas para uma referência (temporada anterior ou média dos promovidos); pi-ratings; GAP ratings; dias de descanso (Série A e Copa do Brasil); jogos sem público; trocas de técnico; formação anunciada (só para escanteios). Cada módulo de `src/features/` tem teste de vazamento.
@@ -30,7 +30,7 @@ Tabelas completas em `results/modelos/` (`rodada4c_conjunto_comparacao.csv`, `ro
 ## Estrutura
 ```
 artigo/          artigo em LaTeX (main.tex, src/, figures/, referencias.bib)
-data/            base canônica, Copa do Brasil e de-para de técnicos (CSV)
+data/            base principal (CSV); Copa do Brasil e de-para de técnicos ficam só locais
 src/features/    variáveis pré-jogo
 src/modelos/     tabela de modelagem, walk-forward, rodadas 2 a 4, análises e figuras
 results/modelos/ resultados de cada rodada (CSV)

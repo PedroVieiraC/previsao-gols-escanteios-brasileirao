@@ -1,6 +1,9 @@
+import os
 import unittest
 
 from src.features.historico import carregar_canonica, ler_tabela
+
+DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
 
 class DadosTest(unittest.TestCase):
@@ -10,8 +13,12 @@ class DadosTest(unittest.TestCase):
         self.assertTrue((j.groupby("temporada").size() == 380).all())
         self.assertFalse(j.duplicated(["data", "mandante", "visitante"]).any())
 
-    def test_copa_e_depara_carregam(self):
+    @unittest.skipUnless(os.path.exists(os.path.join(DATA, "norm_copa_brasil.csv")), "CSV local não versionado")
+    def test_copa_carrega(self):
         self.assertGreater(len(ler_tabela("norm_copa_brasil")), 0)
+
+    @unittest.skipUnless(os.path.exists(os.path.join(DATA, "tb_tecnicos_depara.csv")), "CSV local não versionado")
+    def test_depara_carrega(self):
         self.assertEqual(len(ler_tabela("tb_tecnicos_depara")), 395)
 
 

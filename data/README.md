@@ -19,8 +19,5 @@ Base canônica: 3.040 partidas (380 por temporada), uma linha por partida; chave
 
 Valores ausentes ficam vazios e não são imputados na base.
 
-## `norm_copa_brasil.csv`
-Jogos da Copa do Brasil 2017–2024 (742 realizados), usados nos dias de descanso: `data`, `hora`, `mandante`, `visitante`. O nome do clube fica vazio quando ele não é da Série A.
-
-## `tb_tecnicos_depara.csv`
-De-para de técnicos: `(tecnico_original, clube)` para a pessoa (`pessoa_id`, `nome_padrao`), que unifica grafias do mesmo técnico e separa homônimos. `pessoa_id` vazio: vale `nome_padrao`.
+## Arquivos locais não versionados
+`norm_copa_brasil.csv` (jogos da Copa do Brasil, usados nos dias de descanso) e `tb_tecnicos_depara.csv` (de-para de técnicos) não são versionados neste repositório. São lidos por `src/features/calendario.py`, `copa.py` e `tecnicos.py` e pelos scripts de `src/modelos/`; sem eles, as variáveis de calendário/Copa e de técnicos não podem ser recalculadas.
