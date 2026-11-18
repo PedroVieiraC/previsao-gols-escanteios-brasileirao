@@ -6,3 +6,4 @@ approach: "Variáveis pré-jogo com testes de vazamento, validação walk-forwar
 results: "Em 2.280 partidas de teste, a deviance de Poisson para gols foi 1,0574 (Random Forest) contra 1,0759 da média da liga; para escanteios, 1,1731 contra 1,1838. Ganho pequeno nos dois alvos."
 stack: [Python, pandas, scikit-learn, XGBoost, LaTeX]
 status: completed
+top: 1
